@@ -1,6 +1,11 @@
 # ScraperAPI Node.js SDK
 Node.js SDK for the web scraping service provided by [ScraperAPI](https://www.scraperapi.com/).
 
+# Installation
+```bash
+npm install --save scraperapi-sdk
+```
+
 # Examples
 
 ## Simple GET request
