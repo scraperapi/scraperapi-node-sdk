@@ -1,0 +1,25 @@
+{
+  "author": "ScraperAPI.com",
+  "description": "Node.js SDK for ScraperAPI.com",
+  "devDependencies": {
+    "@types/node": "^20.8.4",
+    "typescript": "^5.2.2"
+  },
+  "keywords": [
+    "datacollection",
+    "scraperapi",
+    "scraping",
+    "webscraping"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "name": "scraperapi-sdk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scraperapi/scraperapi-node-sdk.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "version": "2.0.0"
+}
