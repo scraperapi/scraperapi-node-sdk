@@ -54,12 +54,13 @@ export default function fetch(
       const responseLength = parseInt(typeof responseLengthHeader === 'string' ? responseLengthHeader : '0', 10)
       const responseBody = Buffer.alloc(responseLength);
       const charset = getContentCharset(responseHeaders) as BufferEncoding;
+      let writeOffset = 0;
 
       response.on('data', (data: Buffer | string) => {
         if (typeof data === 'string') {
-          responseBody.write(data);
+          writeOffset += responseBody.write(data, writeOffset);
         } else {
-          responseBody.write(data.toString(charset));
+          writeOffset += responseBody.write(data.toString(charset), writeOffset);
         }
       });
 
